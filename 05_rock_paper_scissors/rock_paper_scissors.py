@@ -28,4 +28,31 @@ class RPS:
         ai_move: str = random.choice(self.valid_moves)
 
         self.display_moves(user_move, ai_move)
-        self.check_move(user_)
+        self.check_move(user_move, ai_move)
+
+    def display_moves(self,user_move: str, ai_move: str):
+        # Display everything nicely
+        print('----')
+        print(f'You: {self.moves[user_move]}')
+        print(f'AI: {self.moves[ai_move]}')
+        print('----')
+
+    def check_move(self, user_move: str, ai_move: str):
+        # Game logic
+        if user_move == ai_move:
+            print('It is a tie!')
+        elif user_move == 'rock' and ai_move == 'scissors':
+            print('You win!')
+        elif user_move == 'scissors' and ai_move == 'paper':
+            print('You win!')
+        elif user_move == 'paper' and ai_move == 'rock':
+            print('You win!')
+        else:
+            print('AI wins...')
+
+
+if __name__ == '__main__':
+    rps = RPS()
+
+    while True:
+        rps.play_game()
