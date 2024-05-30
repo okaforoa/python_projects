@@ -36,7 +36,7 @@ class MyQR:
 def main():
     myqr = MyQR(size=30, padding=2)
     myqr.create_qr(file_name='sample_qr.png',
-                   fg='#48c9b0',
+                   fg='black',
                    bg='white')
 
 
