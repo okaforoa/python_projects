@@ -1,4 +1,4 @@
-import qrcode  # Remember to install Pillow for colors
+import qrcode  # type: ignore # Remember to install Pillow for colors
 
 
 class MyQR:
